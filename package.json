@@ -6,6 +6,6 @@
   "author": "Andrew Goldis <agoldis@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "cy2": "^1.0.3"
+    "cy2": "^1.0.4"
   }
 }
