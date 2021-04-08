@@ -8,7 +8,7 @@ test:
   stage: test
   script:
     # install dependencies
-    - npm ci
+    - npm install
     - npm install -g cypress
     # run Cypress tests
     - npx cy2 run --parallel --key xxx --record
