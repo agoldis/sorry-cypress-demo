@@ -4,7 +4,7 @@ stages:
 variables:
   CYPRESS_API_URL: 'https://sorry-cypress-demo-director.herokuapp.com/'
 test:
-  image: node:latest
+  image: cypress/browsers:node12.14.1-chrome85-ff81
   stage: test
   script:
     # install dependencies
