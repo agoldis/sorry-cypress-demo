@@ -1,0 +1,14 @@
+stages:
+  - test
+
+variables:
+  CYPRESS_API_URL: 'https://sorry-cypress-demo-director.herokuapp.com/'
+test:
+  image: node:latest
+  stage: test
+  script:
+    # install dependencies
+    - npm ci
+    - npm install -g cypress
+    # run Cypress tests
+    - npx cy2 run --parallel --key xxx --record

@@ -1,0 +1,11 @@
+{
+  "name": "sorry-cypress-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/agoldis/sorry-cypress-demo.git",
+  "author": "Andrew Goldis <agoldis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cy2": "^1.0.3"
+  }
+}

@@ -8,7 +8,7 @@ describe('Suite C', function () {
   it(
     'Shows 404',
     {
-      retries: 3,
+      retries: 2,
     },
     function () {
       cy.visit('/non-existing', {
