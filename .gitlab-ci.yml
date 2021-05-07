@@ -1,0 +1,14 @@
+stages:
+  - test
+
+variables:
+  CYPRESS_API_URL: 'https://sorry-cypress-demo-director.herokuapp.com/'
+test:
+  image: cypress/browsers:node12.14.1-chrome85-ff81
+  stage: test
+  script:
+    # install dependencies
+    - npm install
+    - npm install -g cypress
+    # run Cypress tests
+    - npx cy2 run --parallel --key xxx --record
