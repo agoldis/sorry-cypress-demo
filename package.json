@@ -1,0 +1,12 @@
+{
+  "name": "webclient",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "currents": "node ./scripts/currents.js"
+  },
+  "dependencies": {
+    "@currents/cli": "^1.0.7",
+    "cypress": "^7.3.0"
+  }
+}
