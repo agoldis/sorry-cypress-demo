@@ -13,4 +13,4 @@ jobs:
         run: echo "::set-output name=value::sha-$GITHUB_SHA-time-$(date +"%s")"
 
       - name: Print unique ID`
-        run: echo "generated id ${{ steps.uuid.outputs.value }}"
+        run: echo "generated push id ${{ steps.uuid.outputs.value }}"
