@@ -5,8 +5,6 @@ on: [push]
 jobs:
   Run-Cypress-Tests:
     runs-on: ubuntu-latest
-    env:
-      CYPRESS_API_URL: {{ secrets.CYPRESS_API_URL }}
     container: cypress/browsers:node14.17.0-chrome88-ff89
     strategy:
       fail-fast: false
@@ -19,4 +17,6 @@ jobs:
         run: npm ci
       - name: Run Tests
         run: npx cy2 run --parallel --record --key somekey --ci-build-id `Build ${{ GITHUB_RUN_ID }}`
+        env:
+          CYPRESS_API_URL: { { secrets.CYPRESS_API_URL } }
 
