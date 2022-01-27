@@ -14,9 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install
-        run: npm ci
+        run: |
+          npm ci
       - name: Run Tests
-        run: npx cy2 run --parallel --record --key somekey --ci-build-id `Build ${{ secrets.GITHUB_RUN_ID }}`
         env:
-          CYPRESS_API_URL: { { secrets.CYPRESS_API_URL } }
+          CYPRESS_API_URL: ${ { secrets.CYPRESS_API_URL } }
+        run: |
+          npx cy2 run --parallel --record --key somekey --ci-build-id `Build ${{ secrets.GITHUB_RUN_ID }}`
 
