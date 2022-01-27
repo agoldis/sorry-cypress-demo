@@ -20,5 +20,5 @@ jobs:
         env:
           CYPRESS_API_URL: ${ { secrets.CYPRESS_API_URL } }
         run: |
-          npx cy2 run --parallel --record --key somekey --ci-build-id `Build_$GITHUB_RUN_ID`
+          npx cy2 run --parallel --record --key somekey --ci-build-id `Build_Github_Actions`
 
