@@ -18,7 +18,7 @@ jobs:
           npm ci
       - name: Run Tests
         env:
-          CYPRESS_API_URL: ${ { secrets.CYPRESS_API_URL } }
+          CYPRESS_API_URL: ${{secrets.CYPRESS_API_URL}}
         run: |
-          CYPRESS_API_URL=${CYPRESS_API_URL} npx cy2 run --parallel --record --key somekey --ci-build-id Build_Github_Actions
+          CYPRESS_API_URL="http://13.232.86.249:1234/" npx cy2 run --parallel --record --key somekey --ci-build-id Build_Github_Actions
 
