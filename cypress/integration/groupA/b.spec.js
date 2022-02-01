@@ -1,7 +1,9 @@
 describe('Suite B', function () {
-  it('Welcomes you', function () {
-    cy.visit('/');
-    cy.wait(1000);
-    cy.contains('Google Search');
-  });
+  for (let i = 0; i < 15; i++) {
+    it(`Welcomes you ${i}`, function () {
+      cy.visit('/');
+      cy.wait(1000);
+      cy.contains('Google Search');
+    });
+  }
 });
